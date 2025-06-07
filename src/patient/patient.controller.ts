@@ -25,7 +25,7 @@ export class PatientController {
     return patient;
   }
 
-   @Patch(':id') // 
+   @Patch(':id') 
   async update(
     @Param('id', ParseIntPipe) id: number, // Use ParseIntPipe
     @Body() patient: Patient,
@@ -34,7 +34,7 @@ export class PatientController {
   }
 
   @Delete(':id')
-  async remove(@Param('id', ParseIntPipe) id: number): Promise<void> { // Use ParseIntPipe
+  async remove(@Param('id', ParseIntPipe) id: number): Promise<void> { 
     await this.patientService.remove(id);
   }
 }

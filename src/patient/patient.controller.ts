@@ -25,7 +25,7 @@ export class PatientController {
     return patient;
   }
 
-   @Patch(':id') // Changed from Put to Patch
+   @Patch(':id') // 
   async update(
     @Param('id', ParseIntPipe) id: number, // Use ParseIntPipe
     @Body() patient: Patient,
